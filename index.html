@@ -1,0 +1,28 @@
+<head>
+  <script src="./source/browser/asciidoctor.min.js"></script>
+  <link rel="stylesheet" href="./source/css/asciidoctor.css">
+</head>
+
+<body>
+  <div id="content"></div>
+  <script>
+      // Load the AsciiDoc file content from a file
+      var asciidoctor = Asciidoctor();
+      var options = {
+          safe: 'safe',
+          backend: 'html5',
+      };
+
+      fetch('./in.adoc')
+          .then(response => response.text())
+          .then(adoc => {
+              // Convert the AsciiDoc content to HTML using Asciidoctor.js
+              var html = asciidoctor.convert(adoc, options);
+
+              // Insert the HTML into the content div
+              var contentDiv = document.getElementById('content');
+              contentDiv.innerHTML = html;
+          })
+          .catch(error => console.error(error));
+  </script>
+</body>

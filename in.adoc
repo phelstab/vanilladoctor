@@ -1,0 +1,39 @@
+= My Document Title
+
+This is a paragraph of text. Here is some *bold text* and some _italic text_.
+
+== Section 1
+
+This is a subsection.
+
+=== Subsection 1.1
+
+This is a sub-subsection.
+
+==== Subsubsection 1.1.1
+
+This is a sub-sub-subsection.
+
+== Section 2
+
+Here is an unordered list:
+
+* Item 1
+* Item 2
+* Item 3
+
+Here is an ordered list:
+
+. Item 1
+. Item 2
+. Item 3
+
+== Section 3
+
+Here is a code block:
+
+[source, javascript]
+----
+console.log('Hello, world!');
+----
+
